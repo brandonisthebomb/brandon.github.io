@@ -103,6 +103,13 @@
         float: left;
     }
 
+    .img-icon {
+        height: auto;
+        width: auto;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
 
     /*.img-circle:hover {
         border: 2px solid white;
@@ -130,24 +137,6 @@
         }
     }
 
-    .nav-bar li {
-        display: inline-block;
-        padding-right: 50px;
-        padding-top: 12px;
-        color: white;
-    }
-
-    .nav-bar ul {
-        text-align: right;
-        margin: 0;
-    }
-
-    .nav-bar {
-        background-color: #222e69;
-        height: 40px;
-        margin-top: 60px;
-    }
-
     #header {
         background-image: url("../images/background.jpg");
         -webkit-background-size: cover;
@@ -167,24 +156,32 @@
         color: #FFA500 !important;
     }
 
-
-
-    .background {
-        width: 400px;
-        height: 300px;
-        background-color: green;
-        position: relative;
+    #social {
+        background-color: #222e69;
     }
 
-    .headline {
-        width: 100px;
-        height: 100px;
-        background-color: rgba(0, 47, 108, 0.5);
-        position: absolute;
-        bottom: 0;
+    .hi-icon-effect-6 .hi-icon {
+        box-shadow: 0 0 0 4px rgba(255,255,255,1);
+        transition: background 0.2s, color 0.2s;    
     }
 
-  
+    .no-touch .hi-icon-effect-6 .hi-icon:hover {
+        background: rgba(255,255,255,1);
+        color: #222e69;
+    }
+
+    .no-touch .hi-icon-effect-6 .hi-icon:hover:before {
+        animation: spinAround 2s linear infinite;
+    }
+
+    @keyframes spinAround {
+        from {
+            transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
 
 
     
