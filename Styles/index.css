@@ -45,11 +45,27 @@
         display: table-cell;
         text-align: center;
         vertical-align: middle;
+    }    
+
+    .text-center-horizontal {
+        text-align: center;
     }
 
-    .div-custom {
+    .div-full {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .div-full-width {
         display: inline-block;
         width: 100%;
+    }
+
+    .div-left-justify {
+        position: absolute;
+        left: 200px;
+        top: 50px;
     }
 
     .div-margin {
@@ -64,6 +80,39 @@
         width: 50%;
         display: inline-block;
         vertical-align: middle;
+    }
+
+    .ul-plain {
+        list-style-type: none;
+    }
+
+    .div-fixed-bg {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%
+    }
+
+    .links {
+        background-image: url("../images/humpback.jpg");
+    }
+
+    .div-fixed-bg h2 {
+
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .div-fixed-bg a {
+        color: white;
+    }    
+
+    .div-fixed-bg a:hover {
+        color: white;
     }
 
     .div-description {
@@ -136,7 +185,6 @@
             display: none;
         }
     }
-
     #header {
         background-image: url("../images/background.jpg");
         -webkit-background-size: cover;
@@ -144,9 +192,8 @@
         background-size: cover;
         -o-background-size: cover;
         background-repeat: no-repeat;
-        height: 100%;
-
     }
+
 
     #about {
         font-size: 200%;
@@ -156,32 +203,6 @@
         color: #FFA500 !important;
     }
 
-    #social {
-        background-color: #222e69;
-    }
-
-    .hi-icon-effect-6 .hi-icon {
-        box-shadow: 0 0 0 4px rgba(255,255,255,1);
-        transition: background 0.2s, color 0.2s;    
-    }
-
-    .no-touch .hi-icon-effect-6 .hi-icon:hover {
-        background: rgba(255,255,255,1);
-        color: #222e69;
-    }
-
-    .no-touch .hi-icon-effect-6 .hi-icon:hover:before {
-        animation: spinAround 2s linear infinite;
-    }
-
-    @keyframes spinAround {
-        from {
-            transform: rotate(0deg)
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
 
 
     
