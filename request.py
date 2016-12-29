@@ -111,4 +111,3 @@ if __name__ == '__main__':
 		getArrivals(headers, parameters)
 		print ('Updated at ' + str(time.time()), flush = True)
 		time.sleep(2)
-		
