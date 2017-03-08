@@ -4,10 +4,10 @@
     <title>Brandon Liu</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="Styles/index.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Styles/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
     <style>
 
@@ -17,7 +17,8 @@
 <body>
 
     <!-- Header --> 
-    <div id="header" class="div-full">
+
+    <div id="header" class="div-header div-full">
         <div class="div-left-justify text-center-horizontal">
             <h1 id="title" class="title-small">Hi, I'm</h1>
             <h2 id="title" class="title-default">BRANDON.</h2>
@@ -25,46 +26,29 @@
     </div>
 
     <!-- Work -->
-    <div id="work" class="div-full-width text-center-vertical">
-        <h1 id="about" class="title-small-dark">I'm a second year student at the University of Virginia studying Computer Science.  </h1>
-        <h1 id="work" class="title-small-dark">These are some of the things I've been doing.</h1>
+    <div id="info" class="div-full-width text-center-vertical">
+        <h1 id="about" class="title-dark">I'm a second year student at the University of Virginia studying Computer Science.  </h1>
+        <h1 id="work" class="title-orange">These are some of the things I've been doing.</h1>
         <br>
         <br>
     </div>
 
     <div id="experience" class="div-full-width">
 
-        <div id="uvata" class="div-margin">
-            <div class="div-img">
-                <img class="img-circle" src="images\universityofvirginia.jpg">
-            </div><div class="div-description">
-                <h1>
-                    <a href="http://www.cs.virginia.edu/acad/ba/about.html" target="_blank">UVA Department of Computer Science</a>
-                </h1>
-                <h4>
-                    Teaching Assistant, 2016 - Current
-                </h4>
-                <p class="text-default">
-                    TA for CS2110 Software Development Methods. I used my experience in Java to help tutor students during lab. I improved my  communication skills and coding skills by teaching others the basics of data structures.
-                </p>
-            </div>
-        </div>
-
         <div id="booz" class="div-margin">
             <div class="div-img">
                 <img class="img-circle" src="images\Booz-Allen-Hamilton.png">
             </div><div class="div-description">
                 <h1>
-                    <a href="http://www.boozallen.com/stories/tech-trends-2016" target="_blank">Booz Allen Hamilton</a>
+                    <a href="http://www.boozallen.com/stories/tech-trends-2016" target="_blank">Data Science Intern</a>
                 </h1>
                 <h4>
-                    Stategic Innovation Group Intern, 2016
+                    Booz Allen Hamilton, 2016
                 </h4>
                 <p class="text-default">
-                    SIG Summer Games, Data Science and Analytics. I helped my client analyze revenues by collecting data through Python web scrapers and organizing it in a MySQL instance. I lead development on a web application for the client using R and AWS.
+                     I helped my client analyze revenues by collecting data through Python web scrapers and organizing it in a MySQL instance. Then I helped develop a model with advanced machine learning techniques like clustering and k-nearest-neighbors. Finally, I lead development on a web application for the client using R and AWS.
                 </p>
             </div>
-
         </div>
 
         <div id="hackcville" class="div-margin">
@@ -72,13 +56,45 @@
                 <img class="img-circle" src="images\hackcville.png">
             </div><div class="div-description">
                 <h1>
-                    <a href="http://thepioneer.co/" target="_blank">HackCville</a>
+                    <a href="http://hackcville.com/" target="_blank">Web Development Coordinator</a>
                 </h1>
                 <h4>
-                    Wireframe Member, 2016 - Current
+                    HackCville, 2016 - Current
                 </h4>
                 <p class="text-default">
-                    UVA's Startup Society and Entrepreneurship clubhouse. Participated in the Wireframe program for a Web Development Bootcamp to further my interest in Computer Science and broaden my range of skills to encompass HTML/CSS, Javascript, Wordpress, and Git.
+                    UVA's Startup Society and Entrepreneurship clubhouse. Participated in the Wireframe program for a Web Development Bootcamp to further my interest in Computer Science and broaden my range of skills to encompass HTML/CSS, Javascript, Wordpress, and Git. I helped redesign the HackCville website.
+                </p>
+            </div>
+        </div>
+
+        <div id="uvata" class="div-margin">
+            <div class="div-img">
+                <img class="img-circle" src="images\universityofvirginia.jpg">
+            </div><div class="div-description">
+                <h1>
+                    <a href="http://www.cs.virginia.edu/acad/ba/about.html" target="_blank">Teaching Assistant</a>
+                </h1>
+                <h4>
+                    UVA Department of Computer Science, 2016 - 2017
+                </h4>
+                <p class="text-default">
+                    TA for CS2110 Software Development Methods. I used my experience in Java to help tutor students during lab. I improved my own communication skills and coding skills by teaching others the basics of data structures.
+                </p>
+            </div>
+        </div>
+
+        <div id="pwc" class="div-margin">
+            <div class="div-img">
+                <img class="img-circle" src="images\pwc.png">
+            </div><div class="div-description">
+                <h1>
+                    <a href="http://hackcville.com/" target="_blank">Explore Extern</a>
+                </h1>
+                <h4>
+                    PwC, 2017
+                </h4>
+                <p class="text-default">
+                    Explored my interest in the intersection of computer science and business, consulting, and tax. Learned more about my strengths as a leader and was introduced to computer science in risk assurance.
                 </p>
             </div>
         </div>
@@ -86,19 +102,16 @@
     </div>
 
     <div class="links text-center-vertical div-full div-fixed-bg">
-        <h2 class="title-default">
-            <a href="https://github.com/brandonisthebomb/" target="_blank"">github</a>
-            <a href="files/Resume.pdf" target="_blank">resume</a>
-            <a href="https://www.linkedin.com/in/brandon-liu-a2423510a" target="_blank">linkedin</a>
-        </h2>
+        <div>
+            <h2 class="title-default">
+                <a href="https://github.com/brandonisthebomb/" target="_blank"">github</a>
+                <a href="files/Resume.pdf" target="_blank">resume</a>
+                <a href="https://www.linkedin.com/in/brandon-liu-a2423510a" target="_blank">linkedin</a>
+            </h2>
+        </div>
     </div>
 
-    <div class="div-full-width">
-        <dir class="text-center-horizontal">
-            <h1 class="title-small-dark">
-                Some of my projects...
-            </h1>
-        </dir>
+        
     </div>
 
 
