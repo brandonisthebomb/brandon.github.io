@@ -1,0 +1,12 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: black;
+}
+
+content {
+	width: 80%;
+	left: 10%;
+	right: 10%;
+	background: white;
+}
