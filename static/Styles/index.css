@@ -1,0 +1,211 @@
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700&subset=latin,cyrillic);
+    @import url(htt ps://fonts.googleapis.com/css?family=Roboto:300);
+
+    html, body {
+        height: 100%;
+        width: 100%
+    }
+
+    h4 {
+        font-style: italic;
+    }
+
+    .title-small {
+        font-family: 'Roboto', sans-serif;   
+        font-style: normal;
+        font-weight: 100;   
+        font-size: 300%;
+        color: #f8f8ff !important;
+        margin-top: 30%;
+    }
+
+    .title-orange {
+        font-family: 'Roboto', sans-serif;   
+        font-style: normal;
+        font-weight: 300;      
+        font-size: 300%;
+        color: #FFA500 !important;
+    }
+
+    .title-dark {
+        font-family: 'Roboto', sans-serif;   
+        font-style: normal;
+        font-weight: 300;   
+        font-size: 200%;
+        color: #222e69 !important;
+        margin-top: 1.75cm;        
+    }
+
+    .title-default {
+        font-family: 'Roboto Condensed', sans-serif;   
+        font-weight: 200;   
+        font-size: 600%;
+        color: #f8f8ff !important;
+    }
+
+    .text-default {
+        font-family: 'Roboto', sans-serif;   
+        font-weight: 100;   
+        font-size:125%;
+    }
+
+    .text-center-vertical {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }    
+
+    .text-center-horizontal {
+        text-align: center;
+    }
+
+    .div-full {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .div-full-width {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .div-left-justify {
+        position: absolute;
+        left: 200px;
+        top: 50px;
+    }
+
+    .div-margin {
+        display: block;
+        padding:4%;
+        margin: 0 auto;
+        width: 70%;
+        clear: both;
+    }
+
+    .div-img {
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .ul-plain {
+        list-style-type: none;
+    }
+
+    .div-fixed-bg {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: 100%
+    }
+
+    .links {
+        background-image: url("../images/humpback.jpg");
+    }
+
+    .div-fixed-bg h2 {
+
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .div-fixed-bg a {
+        color: white;
+    }    
+
+    .div-fixed-bg a:hover {
+        color: white;
+    }
+
+    .div-description {
+        width: 50%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .div-description h1 {
+        color: #222e69;
+    }
+
+    .div-description h1 a {
+        color: #222e69;
+        text-decoration: none;
+    }
+
+    .div-description h1 a:hover {
+        color: #1c1fed;
+    }
+
+
+    .div-description h4 {
+        color: green;
+    }
+
+
+    .img-circle {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        float: left;
+    }
+
+    .img-icon {
+        height: auto;
+        width: auto;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+
+    /*.img-circle:hover {
+        border: 2px solid white;
+    }*/
+
+    @media only screen and (max-width: 1095px) {
+        .div-img {
+            width: 100%;
+        }
+
+        .div-img img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+            height: 300px;
+            width: 300px;
+        }
+        .div-description {
+            width: 100%;
+            text-align: center;
+        }   
+        .text-default {
+            display: none;
+        }
+    }
+
+    .div-header {
+        background-image: url("../images/background.jpg");
+        background-size: cover;
+        -o-background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+    

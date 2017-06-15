@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>brandon.bus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/bus.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+    
+<body>
+	<div class="container">
+		<div class="content">
+			<h1 id="display">Collecting location data.</h1>
+		</div>
+	</div>
+	<script>
+		var display = document.getElementById("display");
+		window.onload = function getLocation() {
+		    if (navigator.geolocation) {
+		        navigator.geolocation.getCurrentPosition(showPosition);
+		    } else {
+		        display.innerHTML = "Geolocation is not supported by this browser.";
+		    }
+		};
+		function showPosition(position) {
+		    display.innerHTML = "Latitude: " + position.coords.latitude + 
+		    "<br>Longitude: " + position.coords.longitude; 
+	        $.ajaxSetup({
+				cache: false,
+				async: false
+			});
+			$.ajax({
+				type: "POST",
+				dataType: "json",
+				url: "https://1232bb25.ngrok.io/bus",
+				data: {"lat": position.coords.latitude, "lng": position.coords.longitude},
+				success: function(response, textStatus, jqXHR) {
+					alert("Yay!");
+				}
+			});
+		}
+	</script>
+
+</body>
+</html>

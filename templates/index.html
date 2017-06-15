@@ -4,8 +4,8 @@
     <title>I'm Brandon Liu</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="Styles/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/index.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
@@ -31,7 +31,7 @@
 
         <div id="amazon" class="div-margin">
             <div class="div-img">
-                <img class="img-circle" src="images\amazon.png">
+                <img class="img-circle" src="{{ url_for('static', filename='images/amazon.png') }}">
             </div><div class="div-description">
                 <h1>
                     <a href="https://amazon.com/" target="_blank">Software Development Engineer Intern</a>
@@ -40,14 +40,14 @@
                     Amazon, Summer 2017
                 </h4>
                 <p class="text-default">
-                    The world's largest e-commerce site. Working on a customer localization team that helps drive Amazon's international business and revenues. 
+                    The world's most customer-centric company. I worked on the Machine Translation Engineering team supporting customer localization and Amazon's international expansion.
                 </p>
             </div>
         </div>
 
         <div id="google" class="div-margin">
             <div class="div-img">
-                <img class="img-circle" src="images\google-logo.jpg">
+                <img class="img-circle" src="{{ url_for('static', filename='images/google-logo.jpg') }}">
             </div><div class="div-description">
                 <h1>
                     <a href="http://www.google.com" target="_blank">Software Engineering Mentee</a>
@@ -56,7 +56,7 @@
                     Google, 2017
                 </h4>
                 <p class="text-default">
-                    Google and HackCville program where I will work with a Google Engineer mentor on a 7-week project. I want to focus on improving my own development skills and honing in on areas such as machine learning, computer vision, AI, and data science.
+                    I worked with a Google engineer/statistician to develop a computer vision application for automatic YouTube video tagging. I was able to hone in and explore my interests in machine learning, computer vision, and data science.
                 </p>
             </div>
         </div>
@@ -64,7 +64,7 @@
 
         <div id="booz" class="div-margin">
             <div class="div-img">
-                <img class="img-circle" src="images\Booz-Allen-Hamilton.png">
+                <img class="img-circle" src="{{ url_for('static', filename='images/Booz-Allen-Hamilton.png') }}">
             </div><div class="div-description">
                 <h1>
                     <a href="http://www.boozallen.com/stories/tech-trends-2016" target="_blank">Data Science Intern</a>
@@ -80,7 +80,7 @@
 
         <div id="hackcville" class="div-margin">
             <div class="div-img">
-                <img class="img-circle" src="images\hackcville.png">
+                <img class="img-circle" src="{{ url_for('static', filename='images/hackcville.png') }}">
             </div><div class="div-description">
                 <h1>
                     <a href="http://hackcville.com/" target="_blank">Web Development Coordinator</a>
@@ -96,7 +96,7 @@
 
         <div id="uvata" class="div-margin">
             <div class="div-img">
-                <img class="img-circle" src="images\universityofvirginia.jpg">
+                <img class="img-circle" src="{{ url_for('static', filename='images/universityofvirginia.jpg') }}">
             </div><div class="div-description">
                 <h1>
                     <a href="http://www.cs.virginia.edu/acad/ba/about.html" target="_blank">Teaching Assistant</a>
@@ -112,7 +112,7 @@
 
         <div id="pwc" class="div-margin">
             <div class="div-img">
-                <img class="img-circle" src="images\pwc.png">
+                <img class="img-circle" src="{{ url_for('static', filename='images/pwc.png') }}">
             </div><div class="div-description">
                 <h1>
                     <a href="http://www.pwc.com/" target="_blank">Explore Extern</a>
@@ -132,7 +132,7 @@
         <div>
             <h2 class="title-default">
                 <a href="https://github.com/brandonisthebomb/" target="_blank"">github</a>
-                <a href="files/Resume.pdf" target="_blank">resume</a>
+                <a href="{{ url_for('static', filename='files/Resume.pdf') }}" target="_blank">resume</a>
                 <a href="https://www.linkedin.com/in/brandon-liu-a2423510a" target="_blank">linkedin</a>
             </h2>
         </div>
