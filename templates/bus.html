@@ -13,7 +13,6 @@
     	function doLogin() {
 
     	}
-
     	$(document).ready(function() {
 		    $('.commentarea').keydown(function(event) {
 		        if (event.keyCode == 13) {
@@ -22,22 +21,20 @@
 		         }
 		    });
 		});
-
     </script>
 </head>
-    
 <body>
 	<div class="container">
 		<div class="content">
 			<span class="input input--ruri">
-				<form>
-					<input class="input__field input__field--ruri" type="text" id="input-26" />
+			<!-- action="{{ url_for('login') }}" -->
+				<form onsubmit="return doLogin()" method="POST">
+					<input name="user" class="input__field input__field--ruri"  type="text" id="input-26" />
 					<label class="input__label input__label--ruri" for="input-26">
 						<span class="input__label-content input__label-content--ruri">Who are you?</span>
 					</label>
 				</form>
 			</span>
-
 <!-- 			<input id="login" type="text" name="login" placeholder="Who are you?">
  -->			
  			<h1 id="display">Collecting location data.</h1>
