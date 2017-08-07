@@ -8,30 +8,16 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/bus.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    	var login = document.getElementById("login")
-    	function doLogin() {
-
-    	}
-    	$(document).ready(function() {
-		    $('.commentarea').keydown(function(event) {
-		        if (event.keyCode == 13) {
-		            this.form.submit();
-		            return false;
-		         }
-		    });
-		});
-    </script>
 </head>
 <body>
 	<div class="container">
 		<div class="content">
-			<span class="input input--ruri">
+			<span class="input input--ruri" id="authSpan">
 			<!-- action="{{ url_for('login') }}" -->
-				<form onsubmit="return doLogin()" method="POST">
-					<input name="user" class="input__field input__field--ruri"  type="text" id="input-26" />
-					<label class="input__label input__label--ruri" for="input-26">
-						<span class="input__label-content input__label-content--ruri">Who are you?</span>
+				<form onsubmit="return doLogin()">
+					<input name="user" class="input__field input__field--ruri"  type="text" id="username" autocomplete="off" />
+					<label class="input__label input__label--ruri" for="username">
+						<span class="input__label-content input__label-content--ruri" id="label">Who are you?</span>
 					</label>
 				</form>
 			</span>
@@ -42,8 +28,34 @@
 	</div>
 	<script>
 		var display = document.getElementById("display");
-		// window.onload = 
+		var form = document.getElementById("username");
+		var label = document.getElementById("label");
+		var span = document.getElementById("authSpan");
+		function doLogin() {
+			var username = String(form.value);
+			$.ajax({
+				type: "POST",
+				dataType: "text",
+				url: "{{ url_for('login') }}",
+				data: {"user": username},
+				success: function(response, textStatus, jqXHR) {
+					if (response == 'OK') {
+						label.style.color = "black";
+						label.innerHTML = "Welcome."
+						authSpan.display = "none";
+						display.display = "block";
+						getLocation();
+					}
+					else {
+						label.style.color = "red";
+						label.innerHTML = "Sorry, you're not a member of the club :(";
+					}
+				}
+			});
+			return false;
+		}
 		function getLocation() {
+			alert('Getting location');
 		    if (navigator.geolocation) {
 		        navigator.geolocation.getCurrentPosition(showPosition);
 		    } else {
@@ -60,15 +72,17 @@
 			$.ajax({
 				type: "POST",
 				dataType: "json",
-				url: "https://1232bb25.ngrok.io/bus",
+				url: "{{ url_for('bus') }}",
 				data: {"lat": position.coords.latitude, "lng": position.coords.longitude},
 				success: function(response, textStatus, jqXHR) {
 					alert("Yay!");
 				}
 			});
+			return false;
 		}
 	</script>
 
+	<!-- Scripts for frontend animation -->
 	<script src="{{ url_for('static', filename='js/classie.js') }}"></script>
 	<script>
 		(function() {
@@ -99,8 +113,7 @@
 					classie.remove( ev.target.parentNode, 'input--filled' );
 				}
 			}
-		})();
-	</script>
+		})();</script>
 
 </body>
 </html>
